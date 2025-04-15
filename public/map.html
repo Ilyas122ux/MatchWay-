@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MatchWay - Carte des stades</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/logo.png" alt="MatchWay" />
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="index.html#matchs">Matchs</a>
+          <a href="index.html#billets">Billets</a>
+          <a href="index.html#transport">Transport</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="auth-buttons">
+          <button class="btn-login">Connexion</button>
+          <button class="btn-register">Inscription</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="map-section">
+        <div class="map-container">
+          <div id="stadiums-map"></div>
+          <div class="map-sidebar">
+            <h2>Stades de la Coupe du Monde 2030</h2>
+            <div class="country-filters">
+              <button class="filter-btn active" data-country="all">
+                Tous les pays
+              </button>
+              <button class="filter-btn" data-country="maroc">Maroc</button>
+              <button class="filter-btn" data-country="espagne">Espagne</button>
+              <button class="filter-btn" data-country="portugal">
+                Portugal
+              </button>
+            </div>
+            <div class="stadiums-list">
+              <!-- Les stades seront ajoutés dynamiquement via JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>À propos</h4>
+          <p>MatchWay - Votre guide pour la Coupe du Monde</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: contact@mundial2030.com</p>
+          <p>Tél: +212 5XX-XXXXXX</p>
+        </div>
+        <div class="footer-section">
+          <h3>Suivez-nous</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 MatchWay. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Connexion</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" required />
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Mot de passe</label>
+            <input
+              type="password"
+              id="login-password"
+              name="password"
+              required
+            />
+            <div class="error-message"></div>
+          </div>
+          <button type="submit" class="submit-btn">Se connecter</button>
+
+          <div class="social-login">
+            <p>Ou connectez-vous avec</p>
+            <div class="social-buttons">
+              <button
+                type="button"
+                class="social-btn google"
+                title="Se connecter avec Google"
+              >
+                <i class="fab fa-google"></i>
+              </button>
+              <button
+                type="button"
+                class="social-btn facebook"
+                title="Se connecter avec Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <button
+                type="button"
+                class="social-btn apple"
+                title="Se connecter avec Apple"
+              >
+                <i class="fab fa-apple"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="auth-switch">
+            <p>
+              Pas encore de compte ?
+              <a href="#" id="switch-to-register">S'inscrire</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Inscription</h2>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="register-name">Nom complet</label>
+            <input type="text" id="register-name" name="name" required />
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="register-email">Email</label>
+            <input type="email" id="register-email" name="email" required />
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="register-password">Mot de passe</label>
+            <input
+              type="password"
+              id="register-password"
+              name="password"
+              required
+            />
+            <div class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label for="register-confirm-password"
+              >Confirmer le mot de passe</label
+            >
+            <input
+              type="password"
+              id="register-confirm-password"
+              name="confirmPassword"
+              required
+            />
+            <div class="error-message"></div>
+          </div>
+          <button type="submit" class="submit-btn">S'inscrire</button>
+
+          <div class="social-login">
+            <p>Ou inscrivez-vous avec</p>
+            <div class="social-buttons">
+              <button
+                type="button"
+                class="social-btn google"
+                title="S'inscrire avec Google"
+              >
+                <i class="fab fa-google"></i>
+              </button>
+              <button
+                type="button"
+                class="social-btn facebook"
+                title="S'inscrire avec Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <button
+                type="button"
+                class="social-btn apple"
+                title="S'inscrire avec Apple"
+              >
+                <i class="fab fa-apple"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="auth-switch">
+            <p>
+              Déjà un compte ? <a href="#" id="switch-to-login">Se connecter</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="js/map.js"></script>
+    <script src="js/modal.js"></script>
+  </body>
+</html>

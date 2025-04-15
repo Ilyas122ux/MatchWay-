@@ -1,0 +1,439 @@
+/* Styles pour la page de transport */
+.transport-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/transport/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.transport-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.transport-hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Section des options de transport */
+.transport-options {
+  padding: 50px 0;
+}
+
+.transport-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  padding: 15px 30px;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.tab-btn i {
+  margin-right: 8px;
+}
+
+.tab-btn.active {
+  background: #1a73e8;
+  color: white;
+}
+
+.tab-btn:hover:not(.active) {
+  background: #e0e0e0;
+}
+
+/* Formulaire de recherche de vols */
+.search-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.btn-search {
+  width: 100%;
+  padding: 15px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-search:hover {
+  background: #1557b0;
+}
+
+/* Résultats des vols */
+.flight-results,
+.train-results,
+.bus-results {
+  margin-top: 40px;
+}
+
+.flight-results h3,
+.train-results h3,
+.bus-results h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.flight-cards,
+.train-cards,
+.bus-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Cartes de transport */
+.flight-card,
+.train-card,
+.bus-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flight-card:hover,
+.train-card:hover,
+.bus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.flight-header,
+.train-header,
+.bus-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.airline-logo,
+.operator-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.airline,
+.operator {
+  font-weight: 600;
+  color: #333;
+  display: block;
+}
+
+.flight-number,
+.train-number,
+.bus-number {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.flight-details,
+.train-details,
+.bus-details {
+  padding: 15px;
+}
+
+.time-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.departure,
+.arrival {
+  text-align: center;
+}
+
+.time {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  display: block;
+}
+
+.city {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.duration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.duration i {
+  margin-bottom: 5px;
+  color: #1a73e8;
+}
+
+.price-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px dashed #eee;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a73e8;
+}
+
+.per-person {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.class {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.btn-book-flight,
+.btn-book-train,
+.btn-book-bus {
+  width: 100%;
+  padding: 12px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-book-flight:hover,
+.btn-book-train:hover,
+.btn-book-bus:hover {
+  background: #1557b0;
+}
+
+/* Message sans résultats */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.no-results i {
+  font-size: 3rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.no-results h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.no-results p {
+  color: #666;
+}
+
+/* Section d'informations */
+.transport-info {
+  background: #f8f9fa;
+  padding: 50px 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.info-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.info-card i {
+  font-size: 2rem;
+  color: #1a73e8;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.info-card p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Modal de réservation */
+.booking-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.booking-modal .modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.booking-modal h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.booking-summary {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.booking-summary h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.summary-details p {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.btn-confirm-booking {
+  width: 100%;
+  padding: 15px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-confirm-booking:hover {
+  background: #1557b0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transport-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .transport-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+
+  .time-details {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .duration {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .transport-hero {
+    padding: 60px 0;
+  }
+
+  .search-form {
+    padding: 20px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-modal .modal-content {
+    padding: 20px;
+  }
+}

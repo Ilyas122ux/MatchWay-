@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MatchWay</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/logo.png" alt="MatchWay" />
+        </div>
+        <div class="nav-links">
+          <a href="#accueil">Accueil</a>
+          <a href="#matchs">Matchs</a>
+          <a href="#billets">Billets</a>
+          <a href="transport.html">Transport</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <br /><br />
+      <section id="accueil" class="hero-section">
+        <div class="hero-content">
+          <h1>Bienvenue à la Coupe du Monde 2030</h1>
+          <p class="hero-subtitle">Maroc • Espagne • Portugal</p>
+          <p class="hero-description">
+            Vivez l'expérience unique de la première Coupe du Monde tripartite
+            de l'histoire
+          </p>
+          <div class="hero-buttons">
+            <a href="experience.html" class="cta-button primary"
+              >Découvrir l'expérience</a
+            >
+            <a href="#matchs" class="cta-button secondary">Voir les matchs</a>
+            <a href="map.html" class="cta-button secondary">Carte des stades</a>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">48</span>
+            <span class="stat-label">Matchs</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Pays</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">14</span>
+            <span class="stat-label">Villes</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">32</span>
+            <span class="stat-label">Équipes</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="countdown" class="section">
+        <div class="countdown-container">
+          <h2>Compte à rebours</h2>
+          <div class="countdown-timer">
+            <div class="countdown-item">
+              <span class="countdown-number" id="days">00</span>
+              <span class="countdown-label">Jours</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="hours">00</span>
+              <span class="countdown-label">Heures</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="minutes">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="seconds">00</span>
+              <span class="countdown-label">Secondes</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="highlights" class="section">
+        <h2>Points Forts de la Compétition</h2>
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <i class="fas fa-globe-americas"></i>
+            </div>
+            <h3>Première Édition Tripartite</h3>
+            <p>Une compétition unique réunissant trois pays magnifiques</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <i class="fas fa-futbol"></i>
+            </div>
+            <h3>Stades Modernes</h3>
+            <p>
+              Des installations de classe mondiale pour une expérience
+              inoubliable
+            </p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Fans du Monde Entier</h3>
+            <p>
+              Une ambiance unique avec des supporters venus des quatre coins du
+              globe
+            </p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <i class="fas fa-camera"></i>
+            </div>
+            <h3>Expérience Culturelle</h3>
+            <p>Découvrez la richesse culturelle de trois pays exceptionnels</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="section">
+        <h2>Actualités</h2>
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-image">
+              <img src="images/news/news1.jpg" alt="Actualité 1" />
+            </div>
+            <div class="news-content">
+              <span class="news-date">15 Mars 2024</span>
+              <h3>Les stades sont prêts pour la Coupe du Monde 2030</h3>
+              <p>
+                Découvrez les dernières améliorations apportées aux
+                installations...
+              </p>
+              <a href="#" class="read-more">Lire la suite</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image">
+              <img src="images/news/news2.jpg" alt="Actualité 2" />
+            </div>
+            <div class="news-content">
+              <span class="news-date">10 Mars 2024</span>
+              <h3>Programme de transport entre les villes hôtes</h3>
+              <p>Un réseau de transport efficace pour les supporters...</p>
+              <a href="#" class="read-more">Lire la suite</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image">
+              <img src="images/news/news3.jpg" alt="Actualité 3" />
+            </div>
+            <div class="news-content">
+              <span class="news-date">5 Mars 2024</span>
+              <h3>Guide du supporter pour la Coupe du Monde 2030</h3>
+              <p>
+                Tout ce que vous devez savoir pour profiter pleinement de
+                l'événement...
+              </p>
+              <a href="#" class="read-more">Lire la suite</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="newsletter" class="section">
+        <div class="newsletter-container">
+          <h2>Restez Informé</h2>
+          <p>
+            Inscrivez-vous à notre newsletter pour recevoir les dernières
+            actualités et offres spéciales
+          </p>
+          <form class="newsletter-form">
+            <div class="form-group">
+              <input type="email" placeholder="Votre adresse email" required />
+              <button type="submit" class="btn-subscribe">S'inscrire</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="features">
+        <h2>Nos Services</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-ticket-alt"></i>
+            <h3>Billetterie</h3>
+            <p>Réservez vos places pour les matchs</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-bus-alt"></i>
+            <h3>Transport</h3>
+            <p>Planifiez vos déplacements</p>
+            <a href="transport.html" class="btn-search">Rechercher</a>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-hotel"></i>
+            <h3>Hébergement</h3>
+            <p>Trouvez votre logement</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>Guide</h3>
+            <p>Découvrez les stades et attractions</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="matchs" class="section">
+        <h2>Matchs de la Coupe du Monde 2030</h2>
+
+        <!-- Filtres des matchs -->
+        <div class="match-filters">
+          <div class="form-group">
+            <label for="phase-filter">Phase de la compétition</label>
+            <select
+              id="phase-filter"
+              class="filter-select"
+              title="Filtrer par phase de la compétition"
+            >
+              <option value="all">Toutes les phases</option>
+              <option value="groupes">Phase de groupes</option>
+              <option value="huitiemes">Huitièmes de finale</option>
+              <option value="quarts">Quarts de finale</option>
+              <option value="demi">Demi-finales</option>
+              <option value="finale">Finale</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="stadium-filter">Stade</label>
+            <select
+              id="stadium-filter"
+              class="filter-select"
+              title="Filtrer par stade"
+            >
+              <option value="all">Tous les stades</option>
+              <option value="casablanca">Stade Mohammed V, Casablanca</option>
+              <option value="rabat">Stade Moulay Abdellah, Rabat</option>
+              <option value="madrid">Santiago Bernabéu, Madrid</option>
+              <option value="barcelona">Camp Nou, Barcelone</option>
+              <option value="lisbonne">Estádio da Luz, Lisbonne</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Grille des matchs -->
+        <div class="matchs-grid">
+          <!-- Match 1 -->
+          <div class="match-card upcoming">
+            <div class="match-header">
+              <span class="match-date">15 Juin 2030</span>
+              <span class="match-time">20:00</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <img
+                  src="images/flags/maroc.png"
+                  alt="Maroc"
+                  class="team-flag"
+                />
+                <span class="team-name">Maroc</span>
+              </div>
+              <div class="vs">VS</div>
+              <div class="team">
+                <img
+                  src="images/flags/espagne.png"
+                  alt="Espagne"
+                  class="team-flag"
+                />
+                <span class="team-name">Espagne</span>
+              </div>
+            </div>
+            <div class="match-info">
+              <span class="stadium">Stade Mohammed V</span>
+              <span class="city">Casablanca</span>
+            </div>
+            <button class="btn btn-primary">Réserver</button>
+          </div>
+
+          <!-- Match 2 -->
+          <div class="match-card live">
+            <div class="match-header">
+              <span class="match-status">En direct</span>
+              <span class="match-score">2 - 1</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <img
+                  src="images/flags/portugal.png"
+                  alt="Portugal"
+                  class="team-flag"
+                />
+                <span class="team-name">Portugal</span>
+              </div>
+              <div class="vs">VS</div>
+              <div class="team">
+                <img
+                  src="images/flags/argentine.png"
+                  alt="Argentine"
+                  class="team-flag"
+                />
+                <span class="team-name">Argentine</span>
+              </div>
+            </div>
+            <div class="match-info">
+              <span class="stadium">Stade Ibn Battouta</span>
+              <span class="city">Tanger</span>
+            </div>
+            <button class="btn btn-secondary">Suivre le match</button>
+          </div>
+
+          <!-- Match 3 -->
+          <div class="match-card finished">
+            <div class="match-header">
+              <span class="match-status">Terminé</span>
+              <span class="match-score">3 - 0</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <img
+                  src="images/flags/france.png"
+                  alt="France"
+                  class="team-flag"
+                />
+                <span class="team-name">France</span>
+              </div>
+              <div class="vs">VS</div>
+              <div class="team">
+                <img
+                  src="images/flags/allemagne.png"
+                  alt="Allemagne"
+                  class="team-flag"
+                />
+                <span class="team-name">Allemagne</span>
+              </div>
+            </div>
+            <div class="match-info">
+              <span class="stadium">Grand Stade de Marrakech</span>
+              <span class="city">Marrakech</span>
+            </div>
+            <button class="btn btn-secondary">Voir le résumé</button>
+          </div>
+
+          <!-- Match 4 -->
+          <div class="match-card">
+            <div class="match-header">
+              <span class="match-phase">Quarts de finale</span>
+              <span class="match-date">2 Juillet 2030 - 20:00</span>
+            </div>
+            <div class="match-teams">
+              <div class="team">
+                <img src="images/flags/angleterre.png" alt="Angleterre" />
+                <span>Angleterre</span>
+              </div>
+              <div class="vs">VS</div>
+              <div class="team">
+                <img src="images/flags/italie.png" alt="Italie" />
+                <span>Italie</span>
+              </div>
+            </div>
+            <div class="match-info">
+              <span class="stadium"
+                ><i class="fas fa-map-marker-alt"></i> Camp Nou, Barcelone</span
+              >
+              <button class="btn-tickets">Réserver des billets</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="pagination-btn" disabled title="Page précédente">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn">2</button>
+          <button class="pagination-btn">3</button>
+          <button class="pagination-btn" title="Page suivante">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section id="billets" class="section">
+        <h2>Billetterie</h2>
+        <div class="tickets-container">
+          <div class="ticket-filters">
+            <div class="form-group">
+              <label for="phase-filter">Phase de la compétition</label>
+              <select
+                id="phase-filter"
+                class="filter-select"
+                title="Filtrer par phase de la compétition"
+              >
+                <option value="all">Toutes les phases</option>
+                <option value="groupes">Phase de groupes</option>
+                <option value="huitiemes">Huitièmes de finale</option>
+                <option value="quarts">Quarts de finale</option>
+                <option value="demi">Demi-finales</option>
+                <option value="finale">Finale</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="category-filter">Catégorie de billet</label>
+              <select
+                id="category-filter"
+                class="filter-select"
+                title="Filtrer par catégorie de billet"
+              >
+                <option value="all">Toutes les catégories</option>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+                <option value="vip">VIP</option>
+              </select>
+            </div>
+          </div>
+          <div class="tickets-grid">
+            <div class="ticket-card">
+              <div class="ticket-header">
+                <span class="match-phase">Phase de groupes</span>
+                <span class="ticket-category">Standard</span>
+              </div>
+              <div class="ticket-details">
+                <h3>Maroc vs Espagne</h3>
+                <p class="date">15 Juin 2030 - 20:00</p>
+                <p class="stadium">Stade Mohammed V, Casablanca</p>
+                <p class="price">À partir de 150€</p>
+              </div>
+              <button class="btn-reserve">Réserver</button>
+            </div>
+            <!-- Autres billets similaires -->
+          </div>
+        </div>
+      </section>
+
+      <section id="transport" class="section">
+        <h2>Transport</h2>
+        <div class="transport-container">
+          <div class="transport-options">
+            <div class="transport-card">
+              <i class="fas fa-plane-departure"></i>
+              <h3>Vols</h3>
+              <p>Réservez vos vols entre les villes hôtes</p>
+              <br />
+              <a href="transport.html" class="btn-search">Rechercher</a>
+            </div>
+            <div class="transport-card">
+              <i class="fas fa-train"></i>
+              <h3>Trains</h3>
+              <p>Services ferroviaires entre les stades</p>
+              <br />
+              <a href="transport.html" class="btn-search">Rechercher</a>
+            </div>
+            <div class="transport-card">
+              <i class="fas fa-bus"></i>
+              <h3>Bus</h3>
+              <p>Navettes vers les stades</p>
+              <br />
+              <a href="transport.html" class="btn-search">Rechercher</a>
+            </div>
+          </div>
+          <div class="transport-map">
+            <!-- Intégration de carte interactive -->
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <h2>Services Additionnels</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-hotel"></i>
+            <h3>Hébergement</h3>
+            <p>Réservez votre hôtel près des stades</p>
+            <br />
+            <a href="hotels.html" class="btn-book">Réserver</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Restaurants</h3>
+            <p>Découvrez les meilleures tables</p>
+            <br />
+            <a href="restaurants.html" class="btn-book">Réserver</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>Excursions</h3>
+            <p>Visitez les sites touristiques</p>
+            <br />
+            <a href="excursions.html" class="btn-book">Réserver</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-language"></i>
+            <h3>Guide</h3>
+            <p>Services de guide local</p>
+            <br />
+            <a href="guides.html" class="btn-book">Réserver</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <p>contact@mundial2030.com</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <h3>Téléphone</h3>
+              <p>+212 5XX-XXXXXX</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Adresse</h3>
+              <p>123 Avenue Mohammed V, Casablanca, Maroc</p>
+            </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Envoyer</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>À propos</h4>
+          <p>MatchWay - Votre guide pour la Coupe du Monde</p>
+        </div>
+        <div class="footer-section">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="#conditions">Conditions générales</a></li>
+            <li><a href="#confidentialite">Politique de confidentialité</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Suivez-nous</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 MatchWay. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/matches.js"></script>
+    <script src="js/tickets.js"></script>
+    <script src="js/transport.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/newsletter.js"></script>
+  </body>
+</html>

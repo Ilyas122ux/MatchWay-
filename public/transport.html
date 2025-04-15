@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MatchWay - Transport</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/transport.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/logo.png" alt="MatchWay" />
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="index.html#matchs">Matchs</a>
+          <a href="index.html#billets">Billets</a>
+          <a href="index.html#transport">Transport</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="auth-buttons">
+          <button class="btn-login">Connexion</button>
+          <button class="btn-register">Inscription</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="transport-hero">
+        <div class="transport-hero-content">
+          <h1>Transport pour la Coupe du Monde 2030</h1>
+          <p>Planifiez vos déplacements entre les villes hôtes</p>
+        </div>
+      </section>
+
+      <section class="transport-options">
+        <div class="container">
+          <div class="transport-tabs">
+            <button class="tab-btn active" data-tab="flights">
+              <i class="fas fa-plane"></i> Vols
+            </button>
+            <button class="tab-btn" data-tab="trains">
+              <i class="fas fa-train"></i> Trains
+            </button>
+            <button class="tab-btn" data-tab="buses">
+              <i class="fas fa-bus"></i> Bus
+            </button>
+          </div>
+
+          <div class="tab-content active" id="flights">
+            <div class="search-form">
+              <form id="flight-search-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="departure">Départ</label>
+                    <select id="departure" name="departure" required>
+                      <option value="">Sélectionnez une ville</option>
+                      <option value="casablanca">Casablanca</option>
+                      <option value="rabat">Rabat</option>
+                      <option value="marrakech">Marrakech</option>
+                      <option value="madrid">Madrid</option>
+                      <option value="barcelona">Barcelone</option>
+                      <option value="lisbonne">Lisbonne</option>
+                      <option value="porto">Porto</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="arrival">Arrivée</label>
+                    <select id="arrival" name="arrival" required>
+                      <option value="">Sélectionnez une ville</option>
+                      <option value="casablanca">Casablanca</option>
+                      <option value="rabat">Rabat</option>
+                      <option value="marrakech">Marrakech</option>
+                      <option value="madrid">Madrid</option>
+                      <option value="barcelona">Barcelone</option>
+                      <option value="lisbonne">Lisbonne</option>
+                      <option value="porto">Porto</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="departure-date">Date de départ</label>
+                    <input
+                      type="date"
+                      id="departure-date"
+                      name="departure-date"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="return-date">Date de retour</label>
+                    <input type="date" id="return-date" name="return-date" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="passengers">Passagers</label>
+                    <select id="passengers" name="passengers" required>
+                      <option value="1">1 passager</option>
+                      <option value="2">2 passagers</option>
+                      <option value="3">3 passagers</option>
+                      <option value="4">4 passagers</option>
+                      <option value="5">5 passagers</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="class">Classe</label>
+                    <select id="class" name="class" required>
+                      <option value="economy">Économique</option>
+                      <option value="business">Affaires</option>
+                      <option value="first">Première</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn-search">
+                  Rechercher des vols
+                </button>
+              </form>
+            </div>
+
+            <div class="flight-results">
+              <h3>Vols disponibles</h3>
+              <div class="flight-cards">
+                <!-- Les résultats des vols seront ajoutés dynamiquement via JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="trains">
+            <!-- Contenu pour les trains -->
+          </div>
+
+          <div class="tab-content" id="buses">
+            <!-- Contenu pour les bus -->
+          </div>
+        </div>
+      </section>
+
+      <section class="transport-info">
+        <div class="container">
+          <h2>Informations importantes</h2>
+          <div class="info-grid">
+            <div class="info-card">
+              <i class="fas fa-info-circle"></i>
+              <h3>Horaires des vols</h3>
+              <p>
+                Les vols sont disponibles 24h/24 entre les villes hôtes pendant
+                la compétition.
+              </p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-suitcase"></i>
+              <h3>Bagages</h3>
+              <p>
+                Bagage à main inclus (7kg) + bagage en soute (23kg) pour tous
+                les vols.
+              </p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-clock"></i>
+              <h3>Délais de réservation</h3>
+              <p>
+                Réservez au moins 48h avant votre vol pour garantir les
+                meilleurs tarifs.
+              </p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Assurance</h3>
+              <p>
+                Assurance voyage optionnelle disponible lors de la réservation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>À propos</h4>
+          <p>MatchWay - Votre guide pour la Coupe du Monde</p>
+        </div>
+        <div class="footer-section">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="#conditions">Conditions générales</a></li>
+            <li><a href="#confidentialite">Politique de confidentialité</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Suivez-nous</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 MatchWay. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal">
+      <!-- Contenu du modal de connexion -->
+    </div>
+
+    <div id="register-modal" class="modal">
+      <!-- Contenu du modal d'inscription -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/transport.js"></script>
+  </body>
+</html>

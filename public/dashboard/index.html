@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MatchWay - Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard-container">
+      <!-- Menu latéral -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="../images/logo.png" alt="MatchWay" class="dashboard-logo" />
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="index.html" class="active">
+                <i class="fas fa-home"></i>
+                <span>Tableau de bord</span>
+              </a>
+            </li>
+            <li>
+              <a href="matches.html">
+                <i class="fas fa-futbol"></i>
+                <span>Matchs</span>
+              </a>
+            </li>
+            <li>
+              <a href="billets.html">
+                <i class="fas fa-ticket-alt"></i>
+                <span>Billets</span>
+              </a>
+            </li>
+            <li>
+              <a href="transport.html">
+                <i class="fas fa-bus-alt"></i>
+                <span>Transport</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html">
+                <i class="fas fa-concierge-bell"></i>
+                <span>Services</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Contenu principal -->
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div class="header-search">
+            <input type="search" placeholder="Rechercher..." />
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="header-profile">
+            <span class="notifications">
+              <i class="fas fa-bell"></i>
+              <span class="badge">3</span>
+            </span>
+            <div class="profile-menu">
+              <img
+                src="../images/profile.jpg"
+                alt="Profile"
+                class="profile-img"
+              />
+              <span>John Doe</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <h1>Tableau de bord</h1>
+
+          <!-- Statistiques -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <i class="fas fa-ticket-alt"></i>
+              <div class="stat-info">
+                <h3>Billets réservés</h3>
+                <p>12</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-calendar-check"></i>
+              <div class="stat-info">
+                <h3>Matchs à venir</h3>
+                <p>5</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-bus"></i>
+              <div class="stat-info">
+                <h3>Transports réservés</h3>
+                <p>8</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-hotel"></i>
+              <div class="stat-info">
+                <h3>Hébergements</h3>
+                <p>3</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prochains matchs -->
+          <section class="upcoming-matches">
+            <h2>Prochains matchs</h2>
+            <div class="matches-grid">
+              <!-- Les matchs seront ajoutés dynamiquement via JavaScript -->
+            </div>
+          </section>
+
+          <!-- Dernières réservations -->
+          <section class="recent-bookings">
+            <h2>Dernières réservations</h2>
+            <div class="bookings-list">
+              <!-- Les réservations seront ajoutées dynamiquement via JavaScript -->
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MatchWay - Matchs</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/matchs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard-container">
+      <!-- Menu latéral -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img src="../images/logo.png" alt="MatchWay" class="dashboard-logo" />
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="index.html">
+                <i class="fas fa-home"></i>
+                <span>Tableau de bord</span>
+              </a>
+            </li>
+            <li>
+              <a href="matches.html" class="active">
+                <i class="fas fa-futbol"></i>
+                <span>Matchs</span>
+              </a>
+            </li>
+            <li>
+              <a href="billets.html">
+                <i class="fas fa-ticket-alt"></i>
+                <span>Billets</span>
+              </a>
+            </li>
+            <li>
+              <a href="transport.html">
+                <i class="fas fa-bus-alt"></i>
+                <span>Transport</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html">
+                <i class="fas fa-concierge-bell"></i>
+                <span>Services</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Contenu principal -->
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div class="header-search">
+            <input type="search" placeholder="Rechercher un match..." />
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="header-profile">
+            <span class="notifications">
+              <i class="fas fa-bell"></i>
+              <span class="badge">3</span>
+            </span>
+            <div class="profile-menu">
+              <img
+                src="../images/profile.jpg"
+                alt="Profile"
+                class="profile-img"
+              />
+              <span>John Doe</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <div class="content-header">
+            <h1>Matchs</h1>
+            <div class="filters">
+              <select class="filter-select" title="Filtrer par phase">
+                <option value="all">Toutes les phases</option>
+                <option value="groupes">Phase de groupes</option>
+                <option value="huitiemes">Huitièmes de finale</option>
+                <option value="quarts">Quarts de finale</option>
+                <option value="demi">Demi-finales</option>
+                <option value="finale">Finale</option>
+              </select>
+              <select class="filter-select" title="Filtrer par stade">
+                <option value="all">Tous les stades</option>
+                <option value="casablanca">Stade Mohammed V</option>
+                <option value="madrid">Santiago Bernabéu</option>
+                <option value="lisbonne">Estádio da Luz</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Grille des matchs -->
+          <div class="matches-grid">
+            <!-- Match 1 -->
+            <div class="match-card">
+              <div class="match-header">
+                <span class="match-phase">Phase de groupes</span>
+                <span class="match-date">15 Juin 2030 - 20:00</span>
+              </div>
+              <div class="match-teams">
+                <div class="team">
+                  <img
+                    src="../images/flags/maroc.png"
+                    alt="Maroc"
+                    class="team-flag"
+                  />
+                  <span class="team-name">Maroc</span>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                  <img
+                    src="../images/flags/espagne.png"
+                    alt="Espagne"
+                    class="team-flag"
+                  />
+                  <span class="team-name">Espagne</span>
+                </div>
+              </div>
+              <div class="match-info">
+                <span class="stadium"
+                  ><i class="fas fa-map-marker-alt"></i> Stade Mohammed V,
+                  Casablanca</span
+                >
+                <button class="btn-reserve">Réserver des billets</button>
+              </div>
+            </div>
+
+            <!-- Match 2 -->
+            <div class="match-card">
+              <div class="match-header">
+                <span class="match-phase">Phase de groupes</span>
+                <span class="match-date">16 Juin 2030 - 18:00</span>
+              </div>
+              <div class="match-teams">
+                <div class="team">
+                  <img
+                    src="../images/flags/portugal.png"
+                    alt="Portugal"
+                    class="team-flag"
+                  />
+                  <span class="team-name">Portugal</span>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                  <img
+                    src="../images/flags/france.png"
+                    alt="France"
+                    class="team-flag"
+                  />
+                  <span class="team-name">France</span>
+                </div>
+              </div>
+              <div class="match-info">
+                <span class="stadium"
+                  ><i class="fas fa-map-marker-alt"></i> Estádio da Luz,
+                  Lisbonne</span
+                >
+                <button class="btn-reserve">Réserver des billets</button>
+              </div>
+            </div>
+
+            <!-- Match 3 -->
+            <div class="match-card">
+              <div class="match-header">
+                <span class="match-phase">Huitièmes de finale</span>
+                <span class="match-date">2 Juillet 2030 - 20:00</span>
+              </div>
+              <div class="match-teams">
+                <div class="team">
+                  <img
+                    src="../images/flags/angleterre.png"
+                    alt="Angleterre"
+                    class="team-flag"
+                  />
+                  <span class="team-name">Angleterre</span>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team">
+                  <img
+                    src="../images/flags/italie.png"
+                    alt="Italie"
+                    class="team-flag"
+                  />
+                  <span class="team-name">Italie</span>
+                </div>
+              </div>
+              <div class="match-info">
+                <span class="stadium"
+                  ><i class="fas fa-map-marker-alt"></i> Santiago Bernabéu,
+                  Madrid</span
+                >
+                <button class="btn-reserve">Réserver des billets</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <button class="pagination-btn" disabled title="Page précédente">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn" title="Page suivante">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

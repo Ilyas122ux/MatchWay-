@@ -1,0 +1,202 @@
+.map-section {
+  padding: 2rem;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+  background-color: #f8f9fa;
+}
+
+.map-container {
+  display: flex;
+  height: 700px;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#stadiums-map {
+  flex: 1;
+  height: 100%;
+  z-index: 1;
+  background-color: #f8f9fa;
+}
+
+.map-sidebar {
+  width: 300px;
+  background: white;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.map-sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+}
+
+.country-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--light);
+  color: var(--gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.filter-btn.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.stadiums-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stadium-item {
+  padding: 1rem;
+  background-color: var(--light);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.stadium-item:hover {
+  transform: translateX(5px);
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.stadium-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stadium-item p {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.stadium-item:hover p {
+  color: var(--white);
+}
+
+/* Styles pour les popups de la carte */
+.stadium-popup {
+  max-width: 300px;
+}
+
+.stadium-popup img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.stadium-popup h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.stadium-popup p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+
+.stadium-popup .capacity {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Assurez-vous que la carte est visible */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #f8f9fa !important;
+}
+
+.leaflet-tile-pane {
+  opacity: 1 !important;
+}
+
+/* Styles pour les marqueurs */
+.stadium-marker {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .map-container {
+    flex-direction: column;
+  }
+
+  #stadiums-map {
+    height: 500px;
+  }
+
+  .map-sidebar {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 768px) {
+  .map-section {
+    padding: 1rem;
+  }
+
+  .map-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #stadiums-map {
+    height: 400px;
+  }
+
+  .map-sidebar {
+    width: 100%;
+  }
+
+  .country-filters {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #stadiums-map {
+    height: 300px;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

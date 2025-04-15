@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MatchWay - Billets</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/billets.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="MatchWay" />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="index.html#matchs">Matchs</a>
+          <a href="billets.html" class="active">Billets</a>
+          <a href="transport.html">Transport</a>
+          <a href="hotels.html">Hébergement</a>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="excursions.html">Excursions</a>
+          <a href="pays.html">Pays</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section billets-hero">
+        <div class="hero-content">
+          <h1>Billets de Match</h1>
+          <p>Réservez vos places pour les matchs de la Coupe du Monde 2030</p>
+        </div>
+      </section>
+
+      <section class="billets-section">
+        <div class="filters">
+          <div class="filter-group">
+            <label for="phase">Phase</label>
+            <select id="phase">
+              <option value="all">Toutes les phases</option>
+              <option value="groupes">Phase de groupes</option>
+              <option value="huitiemes">Huitièmes de finale</option>
+              <option value="quarts">Quarts de finale</option>
+              <option value="demies">Demi-finales</option>
+              <option value="finale">Finale</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="pays">Pays</label>
+            <select id="pays">
+              <option value="all">Tous les pays</option>
+              <option value="maroc">Maroc</option>
+              <option value="espagne">Espagne</option>
+              <option value="portugal">Portugal</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="categorie">Catégorie</label>
+            <select id="categorie">
+              <option value="all">Toutes les catégories</option>
+              <option value="standard">Standard</option>
+              <option value="premium">Premium</option>
+              <option value="vip">VIP</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="billets-grid">
+          <!-- Les cartes de billets seront générées dynamiquement via JavaScript -->
+        </div>
+
+        <div class="pagination">
+          <button class="prev-page" disabled>
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="page-numbers">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+          <button class="next-page">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-container">
+          <div class="info-card">
+            <i class="fas fa-ticket-alt"></i>
+            <h3>Types de Billets</h3>
+            <p>
+              Standard, Premium et VIP avec différents niveaux de confort et
+              services
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Garantie</h3>
+            <p>Billets officiels garantis par la FIFA</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-credit-card"></i>
+            <h3>Paiement Sécurisé</h3>
+            <p>Transactions 100% sécurisées</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>À propos</h4>
+          <p>MatchWay - Votre guide pour la Coupe du Monde</p>
+        </div>
+        <div class="footer-section">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#matchs">Matchs</a></li>
+            <li><a href="billets.html">Billets</a></li>
+            <li><a href="transport.html">Transport</a></li>
+            <li><a href="hotels.html">Hébergement</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="excursions.html">Excursions</a></li>
+            <li><a href="pays.html">Pays</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>Email: contact@matchway.com</p>
+          <p>Tél: +33 1 23 45 67 89</p>
+        </div>
+        <div class="footer-section">
+          <h4>Suivez-nous</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 MatchWay. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="js/billets.js"></script>
+  </body>
+</html>

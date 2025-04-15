@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MatchWay - Restaurants</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/restaurants.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="MatchWay" />
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="index.html#matchs">Matchs</a>
+          <a href="index.html#billets">Billets</a>
+          <a href="transport.html">Transport</a>
+          <a href="hotels.html">Hébergement</a>
+          <a href="restaurants.html" class="active">Restaurants</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section restaurants-hero">
+        <div class="hero-content">
+          <h1>Découvrez les meilleures tables</h1>
+          <p>Une sélection des meilleurs restaurants près des stades</p>
+          <div class="hero-image">
+            <img
+              src="images/res4.jpeg"
+              alt="Restaurant gastronomique"
+              class="hero-restaurant-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="search-section">
+        <div class="search-container">
+          <form id="restaurant-search-form" class="search-form">
+            <div class="form-group">
+              <label for="city">Ville</label>
+              <select id="city" name="city" required>
+                <option value="">Sélectionnez une ville</option>
+                <option value="casablanca">Casablanca</option>
+                <option value="rabat">Rabat</option>
+                <option value="tanger">Tanger</option>
+                <option value="madrid">Madrid</option>
+                <option value="barcelona">Barcelone</option>
+                <option value="lisbonne">Lisbonne</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cuisine">Type de cuisine</label>
+              <select id="cuisine" name="cuisine">
+                <option value="">Toutes les cuisines</option>
+                <option value="marocaine">Marocaine</option>
+                <option value="espagnole">Espagnole</option>
+                <option value="portugaise">Portugaise</option>
+                <option value="internationale">Internationale</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="price-range">Prix</label>
+              <select id="price-range" name="price-range">
+                <option value="">Tous les prix</option>
+                <option value="1">€</option>
+                <option value="2">€€</option>
+                <option value="3">€€€</option>
+                <option value="4">€€€€</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-search">Rechercher</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="restaurants-section">
+        <div class="restaurants-grid">
+          <!-- Restaurant 1 -->
+          <div class="restaurant-card">
+            <div class="restaurant-image">
+              <img src="images/res1.jpeg" alt="Restaurant El Fna" />
+              <span class="restaurant-price">€€€</span>
+            </div>
+            <div class="restaurant-info">
+              <h3>Restaurant El Fna</h3>
+              <p class="restaurant-cuisine">Cuisine marocaine traditionnelle</p>
+              <p class="restaurant-location">
+                <i class="fas fa-map-marker-alt"></i>
+                1.5km du Stade Mohammed V
+              </p>
+              <div class="restaurant-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(128 avis)</span>
+              </div>
+              <div class="restaurant-features">
+                <span><i class="fas fa-wifi"></i> WiFi</span>
+                <span><i class="fas fa-parking"></i> Parking</span>
+                <span><i class="fas fa-utensils"></i> Terrasse</span>
+              </div>
+              <button class="btn-reserve">Réserver une table</button>
+            </div>
+          </div>
+
+          <!-- Restaurant 2 -->
+          <div class="restaurant-card">
+            <div class="restaurant-image">
+              <img src="images/res2.jpeg" alt="Tapas Bar Barcelona" />
+              <span class="restaurant-price">€€</span>
+            </div>
+            <div class="restaurant-info">
+              <h3>Tapas Bar Barcelona</h3>
+              <p class="restaurant-cuisine">Cuisine espagnole</p>
+              <p class="restaurant-location">
+                <i class="fas fa-map-marker-alt"></i>
+                2km du Camp Nou
+              </p>
+              <div class="restaurant-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(95 avis)</span>
+              </div>
+              <div class="restaurant-features">
+                <span><i class="fas fa-wifi"></i> WiFi</span>
+                <span><i class="fas fa-utensils"></i> Terrasse</span>
+                <span><i class="fas fa-glass-martini-alt"></i> Bar</span>
+              </div>
+              <button class="btn-reserve">Réserver une table</button>
+            </div>
+          </div>
+
+          <!-- Restaurant 3 -->
+          <div class="restaurant-card">
+            <div class="restaurant-image">
+              <img src="images/res3.jpeg" alt="Lisbon Seafood" />
+              <span class="restaurant-price">€€€€</span>
+            </div>
+            <div class="restaurant-info">
+              <h3>Lisbon Seafood</h3>
+              <p class="restaurant-cuisine">Fruits de mer portugais</p>
+              <p class="restaurant-location">
+                <i class="fas fa-map-marker-alt"></i>
+                3km de l'Estádio da Luz
+              </p>
+              <div class="restaurant-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(156 avis)</span>
+              </div>
+              <div class="restaurant-features">
+                <span><i class="fas fa-wifi"></i> WiFi</span>
+                <span><i class="fas fa-parking"></i> Parking</span>
+                <span><i class="fas fa-utensils"></i> Terrasse</span>
+              </div>
+              <button class="btn-reserve">Réserver une table</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <button class="pagination-btn" disabled>
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn">2</button>
+          <button class="pagination-btn">3</button>
+          <button class="pagination-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>À propos</h4>
+          <p>MatchWay - Votre guide pour la Coupe du Monde</p>
+        </div>
+        <div class="footer-section">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="#conditions">Conditions générales</a></li>
+            <li><a href="#confidentialite">Politique de confidentialité</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Suivez-nous</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 MatchWay. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/restaurants.js"></script>
+  </body>
+</html>
